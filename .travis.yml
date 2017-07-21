@@ -6,13 +6,13 @@ install:
 cache:
   directories:
     - node_modules
- before_deploy:
-   - hexo g
- deploy:
-   - provider: pages
-     skip_cleanup: true
-     github_token: $GITHUB_TOKEN
-     local_dir: public
-     target_branch: master
-     on:
-       branch: dev
+before_deploy:
+  - hexo g
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: public
+    target_branch: gh-pages
+    on:
+      branch: master
