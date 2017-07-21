@@ -6,7 +6,23 @@ tag:
 - React 
 ---
 
-## 在 IE 11控制台报错：Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.
+## 在 IE 11 控制台报错：Objects are not valid as a React child
+
+错误的全文: [error-decoder](https://facebook.github.io/react/docs/error-decoder.html?invariant=31&args%5B%5D=object%20with%20keys%20%7B%24%24typeof%2C%20type%2C%20key%2C%20ref%2C%20props%2C%20_owner%7D&args%5B%5D=)
+
+这问题一般会在开发环境中遇到，在使用 React 15.4 以后，如果使用了 `react-hot-loader` 则必须在热加载之前加载 `babel-polyfill`, 在你的 `webpack.config.js` 中参考如下配置:
+
+```js
+entry: [
+  'babel-polyfill',
+  'react-hot-loader/patch',
+  'webpack-dev-server/client?http://127.0.0.1:3000',
+  'webpack/hot/only-dev-server',
+  path.resolve(__dirname, './scr/index')
+]
+```
+
+## 在 IE 11 控制台报错：Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.
 
 如果出现这个错误是提示，在本地环境配置 `NODE_ENV=development` ，再看一下控制台是否输出了一些更详细的错误信息，参考 [Introducing React's Error Code System](https://facebook.github.io/react/blog/2016/07/11/introducing-reacts-error-code-system.html) 。
 
@@ -24,7 +40,7 @@ import 'babel-polyfill'
 
 > 在 webpack 构建的时候会兼容性处理
 
-## 在 IE 11控制台报错： Promise is undefined
+## 在 IE 11 控制台报错： Promise is undefined
 
 IE 11 不支持 Promise 对象，解决办法
 
