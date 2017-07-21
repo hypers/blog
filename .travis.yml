@@ -1,26 +1,18 @@
-language: node_js  #设置语言
-
-node_js: stable  #设置相应的版本
-
+language: node_js
+node_js:
+  - stable
 install:
-  - npm install  #安装hexo及插件
-
-script:
-  - hexo cl  #清除
-  - hexo g  #生成
-
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "superman"  #修改name
-  - git config user.email "supermanchc@gmail.com"  #修改email
-  - git add .
-  - git commit -m "update"
-  - git push --force --quiet "https://${Github_Token}@${GH_REF}" master:master  #GH_TOKEN是在Travis中配置token的名称
-
-branches:
-  only:
-    - dev  #只监测 dev 分支
-env:
- global:
-   - GH_REF: github.com/hypers/blog.git  #设置GH_REF
+  - npm install
+cache:
+  directories:
+    - node_modules
+ before_deploy:
+   - hexo g
+ deploy:
+   - provider: pages
+     skip_cleanup: true
+     github_token: $GITHUB_TOKEN
+     local_dir: public
+     target_branch: master
+     on:
+       branch: dev
