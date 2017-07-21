@@ -6,6 +6,24 @@ tag:
 - React 
 ---
 
+## Each child in an array or iterator should have a unique `key` prop.
+
+这个警告很明确，在遍历子元素的时候，每一个子元素都应该有一个唯一的 `key`。
+
+参考官网相关说明 [lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html#keys)
+
+但是，这里需要注意的是避免使用数组的 index 来作为属性 key 的值，推荐使用唯一 ID。
+参考 [Index as a key is an anti-pattern](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
+
+```js
+const todoItems = todos.map((todo) =>
+  <li key={todo.id}>
+    {todo.text}
+  </li>
+);
+```
+
+
 ## 在 IE 11 控制台报错：Objects are not valid as a React child
 
 错误的全文: [error-decoder](https://facebook.github.io/react/docs/error-decoder.html?invariant=31&args%5B%5D=object%20with%20keys%20%7B%24%24typeof%2C%20type%2C%20key%2C%20ref%2C%20props%2C%20_owner%7D&args%5B%5D=)
