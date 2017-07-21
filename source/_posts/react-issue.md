@@ -6,13 +6,31 @@ tag:
 - React 
 ---
 
+## setState(...): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component. This is a no-op.
+
+这个警告是说，在一个已经卸载的组件上调用 `setState` 是无效的。出现这种情况一般都是异步操作造成的，比如一个异步数据请求，响应后执行 `setState` 去更新组件，但是如果在异步请求未完成前，路由发生变化，页面当前组件被卸载，这个时候异步请求没有被中止，导致等请求完成后就会执行 `setState` 试图去更新组件，就会报当前错误。
+
+解决办法很简单，一般都是在执行 `setState` 之前判断一下当前组件是否被卸载，如果没有被卸载，才执行 `setState`。在 ES6 以前可以通过 `this.isMounted()` 来判断当前组件是否装载，如下：
+
+```js
+if(this.isMounted()) { // This is bad.
+  this.setState({...});
+}
+```
+但是在 ES6 以后不能用这种方式，这是一种反模式，参考[isMounted is an Antipattern](https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html)
+
+可以利用组件的生命周期自己维护一个 `isMounted` 状态， 在 `componentDidMount` 中把 `isMounted` 设置为 `true`,
+在 `componentWillUnmount` 再将 `isMounted` 设置为 `false`。 通过 `isMounted` 变量来判断组件是否装载。
+
+
+
 ## Each child in an array or iterator should have a unique `key` prop.
 
 这个警告很明确，在遍历子元素的时候，每一个子元素都应该有一个唯一的 `key`。
 
 参考官网相关说明 [lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html#keys)
 
-但是，这里需要注意的是避免使用数组的 index 来作为属性 key 的值，推荐使用唯一 ID。
+但是这里需要注意，避免使用数组的 index 来作为属性 key 的值，推荐使用唯一 ID。
 参考 [Index as a key is an anti-pattern](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)
 
 ```js
