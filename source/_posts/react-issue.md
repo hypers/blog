@@ -89,3 +89,5 @@ npm i —save es6-promise
 ```js
 import 'es6-promise/auto';
 ```
+
+> 本文作者：[郭小铭](https://github.com/simonguo)
