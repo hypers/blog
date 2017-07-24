@@ -118,4 +118,13 @@ npm i —save es6-promise
 import 'es6-promise/auto';
 ```
 
+## 在 IE 11 浏览器上 FontIcon 图标不显示
+
+这个问题和 React 没有关系，但是这里也记录一下。
+在 IE11 会下载 .ttf/.woff 字体文件， 通过 Network 我们可以看到字体文件 `response headers` 中有一个 `Pragma：no-cache`,由于 IE 似乎有缓存和字体的问题，所有导致图标不能正常显示。所以删除 WEB 服务(Nginx..)中的 `Pragma：no-cache` 和 `Cache-Control：no-store` 就能正常访问。
+
+参考 [IE and Cache-Control](https://github.com/FortAwesome/Font-Awesome/issues/6454)
+
+
+
 > 本文作者：[郭小铭](https://github.com/simonguo)
