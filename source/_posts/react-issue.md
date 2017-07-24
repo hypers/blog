@@ -6,6 +6,34 @@ tag:
 - React 
 ---
 
+## Warning: It looks like you're using a minified copy of the development build of React. When deploying React apps to production, make sure to use the production build which skips development warnings and is faster.
+
+当 React 升级到 v15.* 以后，可能会见到这个警告，它是意思说你在生产环境中使用的是一个开发环境 minified 的代码。 
+
+那 React 它是怎么办判断你正在访问的是生产环境，而不是开发环境呢？ 它是通过 webpack 知道的，因为最终发布生产环境的代码都是通过 webpack 命令打包。如果你是在开发环境，那肯定是用 webpack-dev-server。  在生产环境中不应该包括开发中使用的所有额外代码，所以在 webpack 部署环境中需要添加以下配置：
+
+```js
+module.exports = {
+  //...
+  plugins:[
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: true
+      }
+    })
+  ]
+  //...
+}
+```
+参考[Make your own React production version with webpack](http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/)
+
+
+
 ## setState(...): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component. This is a no-op.
 
 这个警告是说，在一个已经卸载的组件上调用 `setState` 是无效的。出现这种情况一般都是异步操作造成的，比如一个异步数据请求，响应后执行 `setState` 去更新组件，但是如果在异步请求未完成前，路由发生变化，页面当前组件被卸载，这个时候异步请求没有被中止，导致等请求完成后就会执行 `setState` 试图去更新组件，就会报当前错误。
