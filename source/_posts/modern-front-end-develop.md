@@ -30,7 +30,7 @@ web的诞生时期
 
 但是正真意义上的web开发的诞生就是浏览器诞生之后了。那个时候我们的web开发，其实就是内容开发，它与今天我们做PPT，写word文档没有什么本质不同。为什么说在当时web开发等同于内容开发呢？看看HTML的全称就知道了，Hypertext Markup Language ，超文本标记语言。
 
-![snipaste_20170730_122053](./snipaste_20170730_122053.png)代码：
+{% asset_img snipaste_20170730_122053.png snipaste_20170730_122053 %}
 
 ```html
 <header>
@@ -69,7 +69,7 @@ web诞生之初所有的页面几乎都是人肉编写，服务器接收到对�
 
 CGI （ Common Gateway Interface / 通用网关接口 ）它定义了web服务器与应用程序之间通讯的接口。有了CGI，web从之间返回给浏览器静态内容变成了，拿到URL解析出其中的参数，判断是否请求的是静态资源然后如果是动态资源，那么把解析出的参数丢给CGI程序，CGI调用外部数据库或者直接返回输出的内容给服务器。然后服务器把输出之间返回给浏览器。
 
-![CGI](./cgi.png)
+{% asset_img cgi.png CGI %}
 
 ```c
 /*
@@ -139,7 +139,7 @@ PHP的一个小例子，通过UA来判断当前浏览器是否为IE，因为混�
 
 这个时期 java 语言的jsp规范里提出了一个JSP Model 2 模型，并且将其定义为一种架构模式。这个东西最大的意义是把MVC 这种GUI编程架构带到了Web。
 
-![MVC](./mvc.gif)
+{% asset_img mvc.gif MVC %}
 
 这个时期 JAVA web的各种基础应用的发展使得java提出了j2ee的web架构，而微软则提出了.net 开发平台。
 
@@ -148,8 +148,7 @@ MVC开发框架时代
 2004年，DHH（David Heinemeier Hansson）在开发Basecamp的时候发现无论是php还是java来开发web应用都不怎么满意，然后在好友的建议下使用了ruby 并且一见钟情，于是在产品开发完毕后抽出了其中的框架，并且命名为Ruby on Rails。
 
 
-
-![MVC](./MVC.PNG)
+{% asset_img MVC.PNG MVC %}
 
 结合这张图片我们看一下rails的具体运作流程，
 
@@ -222,13 +221,13 @@ SAP（Single Page Application / 单页应用）
 
 因此和后端MVC框架相比，前端框架的架构更像这个样子：
 
-![FE-MVC](./FE-MVC.jpg)
+{% asset_img FE-MVC.jpg FE-MVC %}
 
 区别在于Model和View是可以直接通讯的，但是View和Model直接通讯会带来诸多维护上的问题，最大的问题数据和界面同步的问题，
 
 解决这个问题的关键在于阻止View和Model进行直接通讯，于是我们可以将上图中一部分可以和View进行通讯的Model拿出来作为View-model，同时把Controller里面用于同步View和Model关系的部分也放到View-model里，然后他们之间的关系就变成这样。
 
-![MVVM](./MVVM.png)
+{% asset_img MVVM.png MVVM %}
 
 Vue作为一个视图框架实现了的视图和数据的双向绑定功能
 
@@ -248,23 +247,21 @@ var app6 = new Vue({
 })
 ```
 
-![2-way](./2-way.png)
+{% asset_img 2-way.png 2-way %}
 
 传统的MV*框架存在着数据流不清晰的问题，因为View和Model直接的通信往往都是双向的。
 
-![2way](MV.PNG)
-
-
+{% asset_img MV.PNG 2way %}
 
 因此为了让数据流更加清楚，Facebook提出了单向数据流的Flux框架。
 
-![Flux](./FLUX.png)
+{% asset_img FLUX.png Flux %}
 
 用户发出一个Action Dispatcher收到Action 分发给Store，Store根据Action的类型来改变数据，然后通知View，View收到通知更新界面。
 
 如果需要从View来更新数据的话就添加一个Action，这样即使在应用很复杂的情况下，数据的流向也会变得很清楚了。
 
-![1-WAY](./1-way.jpg)
+{% asset_img 1-way.jpg 1-WAY %}
 
 总结一下，事实上纵观web发展史，框架直接的架构本质上来看在传统web开发框架Rails出现之后久没发生太大变化了，后面的几乎都是这种模式的变体，web还在发展，也肯定会有旧的框架死掉，新的框架出来，抓住其中的核心才是最关键的。
 
