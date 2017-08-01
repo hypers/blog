@@ -125,6 +125,30 @@ import 'es6-promise/auto';
 
 参考 [IE and Cache-Control](https://github.com/FortAwesome/Font-Awesome/issues/6454)
 
+## 在 React 中使用 debounce 
+如果需要在 React 组件中使用 debounce 方法可以参考下面代码
+```javascript
+class SearchBox extends React.Component {
+    constructor(props) {
+        super(props);
+        this.method = debounce(this.method,300);
+    }
+    method() {
+        //...
+    }
+    render(){
+        return(
+            <input onKeyUp={e => {
+              e.persist();
+              this.handleKeyDown(e);
+            }}/>
+        )
+    }
+}
+```
+因为 `React` 中 `SyntheticEvent` 是共用的，也就是说 `SyntheticEvent`对象将会循环使用。而每次执行完事件后，它所有的属性都将会失效（所有属性的值都被置为了 `null`）。所以在调用 `debounce` 方法前，一定要先调用 `e.persist()`来移除 `SyntheticEvent` ，并允许 `event`对象被保留下来以用于你自己的代码。
+参考文章:
+- [Perform debounce in React.js](https://stackoverflow.com/questions/23123138/perform-debounce-in-react-js#answer-28046731)
+- [React Document SyntheticEvent](https://facebook.github.io/react/docs/events.html#event-pooling)
 
-
-> 本文作者：[郭小铭](https://github.com/simonguo)
+> 本文作者：[郭小铭](https://github.com/simonguo)、[杨过](https://github.com/hiyangguo)
