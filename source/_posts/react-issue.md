@@ -6,6 +6,25 @@ tag:
 - React 
 ---
 
+## React 中, 在 `Controlled`(受控制)的文本框中输入中文 `onChange` 会触发多次
+
+[Issues](https://github.com/facebook/react/issues/3926)
+
+通过输入法输入中文,日文，不管哪种一种用拼音的、笔划的，只要按下键盘的动作都会触发文本框的 `change` 事件。 但是 `React` 中的受控组件都通过触发 `change` 事件后得到的值再去更新组件的`value`, 这样不停的触发 `change`，导致 `value` 一直在更新，组件就一直在 render,  可能会造成组件运行逻辑问题，输入框内出现很多字符，而且中文输入不进去。
+
+在 DOM events 中另外有 3 个事件可以辅助监听一段文字的输入：
+
+- compositionstart : 事件触发于一段文字的输入之前；
+- compositionupdate : 事件触发于字符被输入到一段文字的时候；
+- compositionend : 事件触发于一段文字的输入完成。
+
+我们可以通过这 3 个事件判断当前输入是否完整的输入，再触发 `onChange` 事件，这样就能解决多次触发 `onChange` 的问题。 还有一个重要的问题，虽然 `onChange` 要等一次完整输入后才触发，但是文本框上的显示需要是实时的，所以还要考虑在 `state` 中维护一个 `innerValue` 做实时更新，这样就没有问题了。
+
+> 另外这 3 个事件在各个浏览器上的兼容性不一样，所以还要考虑兼容性的问题。 具体详细的实现可以参考 [form-lib](https://github.com/rsuite/form-lib/blob/master/src/createFormControl.js)。
+
+
+
+
 ## Warning: It looks like you're using a minified copy of the development build of React. When deploying React apps to production, make sure to use the production build which skips development warnings and is faster.
 
 当 React 升级到 v15.* 以后，可能会见到这个警告，它是意思说你在生产环境中使用的是一个开发环境 minified 的代码。 
