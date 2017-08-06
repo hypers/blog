@@ -53,7 +53,13 @@ git checkout -b dev
 ```
 
 **第三步：创建文章**
-进入到 `blog/source/_posts` 文件夹，创建 markdown 文件，按照上面的格式写文章。
+使用`hexo new <title>`命令新建文章，例如：
+
+```bash
+hexo new hello-hypers
+```
+
+或者进入到 `blog/source/_posts` 文件夹，创建 markdown 文件，按照上面的格式写文章。
 文章写完之后，直接提交到 GitHub。
 
 **第四步**
