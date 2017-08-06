@@ -44,4 +44,15 @@ $(document).ready(function () {
   CONFIG.motion && NexT.motion.integrator.bootstrap();
 
   $(document).trigger('bootstrap:after');
+
+
+  function updateMainTop() {
+    $('.page-home .main').css('margin-top', $(window).height());
+  }
+
+  if ($('.page-home').length) {
+    updateMainTop();
+    $(window).on('resize', updateMainTop);
+  }
+
 });
