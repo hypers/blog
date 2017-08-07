@@ -84,3 +84,4 @@ $RECYCLE.BIN/
 
 # themes
 /public
+yarn.lock
