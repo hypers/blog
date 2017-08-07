@@ -19,6 +19,9 @@ tags:
 - ES7
 - Async函数
 ---
+// 文章简介，必须要有的，用于在首页显示。使用 <!-- more --> 作为分割
+write something xxxxx
+<!-- more -->
 
 //正文部分
 
@@ -46,10 +49,9 @@ tags:
 >Blog Github 地址：[Blog](https://github.com/hypers/blog)
 
 **第二步：clone repository 到你本地**
-clone 到本地后，并切换到 `dev` 分支。
+clone 到本地后，并切换到 `master` 分支。
 ```bash
 git clone git@github.com:hypers/blog.git
-git checkout -b dev
 ```
 
 **第三步：创建文章**
