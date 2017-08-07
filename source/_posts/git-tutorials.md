@@ -168,7 +168,7 @@ $ git remote add origin git@git.hypers.com:Godfery/git-share-salloto.git
 |  修订（Revision） |  用来表示代码的一个版本状态。最新的版本可以通过HEAD来获取。之前的版本可以通过"HEAD~1"来获取，以此类推。Git通过用SHA1 hash算法表示的id来标识不同的版本。每一个 SHA1 id都是160位长，16进制标识的字符串。 |
 
 # 添加与提交
-## 添加
+## `git add`
 ```bash
 # 添加某个文件
 $ git add < filename >
@@ -178,7 +178,7 @@ $ git add .
 $ git add -p
 ```
 
-## 提交
+## `git commit`
 ```bash
 $ git commit
 $ git commit -m "测试提交"
@@ -411,8 +411,6 @@ $ git commit --amend --no-edit
 
 > `git commit --amend` 命令是修复最新提交的便捷方式。amend 不只是修改了最新的提交——它进行了一次替换。
 
-
-# 重写项目历史
 ## `git rebase`
 ```bash
 # 将当前分支 rebase 到 `<base>`
