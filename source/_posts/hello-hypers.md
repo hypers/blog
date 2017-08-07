@@ -20,10 +20,11 @@ tags:
 - Async函数
 ---
 // 文章简介，必须要有的，用于在首页显示。使用 <!-- more --> 作为分割
-write something xxxxx
+这里是简介部分的内容
 <!-- more -->
 
 //正文部分
+这里是正文部分的内容
 
 // 结尾
 > 本文作者：[Superman](https://github.com/superman66)
