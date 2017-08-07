@@ -1,2 +1,2 @@
-# Hypers FE blog
-[test-blog](./first-post.md)
+# HYPERS Blog
+[规则](./RULES.md)
