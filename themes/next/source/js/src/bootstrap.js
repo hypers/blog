@@ -47,7 +47,16 @@ $(document).ready(function () {
 
 
   function updateMainTop() {
-    $('.page-home .main').css('margin-top', $(window).height());
+    const h = $(window).height();
+    const w = $(window).width();
+    if (w > 768) {
+      $('.page-home .main').css('margin-top', h);
+      $('.starry-warpper').css('height', h);
+      $('.hypers-loop-warpper').css('top', h / 2 - 75 - 128 / 2);
+    }else{
+      $('.hypers-loop-warpper').hide();
+    }
+
   }
 
   if ($('.page-home').length) {
