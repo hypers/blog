@@ -6,3 +6,4 @@
 {% include 'tencent-mta.swig' %}
 {% include 'cnzz-analytics.swig' %}
 {% include 'application-insights.swig' %}
+{% include 'hypers-analytics.swig' %}
