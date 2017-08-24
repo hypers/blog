@@ -85,3 +85,4 @@ $RECYCLE.BIN/
 # themes
 /public
 yarn.lock
+/db.json
