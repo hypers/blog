@@ -47,13 +47,13 @@ $(document).ready(function () {
 
 
   function updateMainTop() {
-    const h = $(window).height();
-    const w = $(window).width();
+    var h = $(window).height();
+    var w = $(window).width();
     if (w > 768) {
       $('.page-home .main').css('margin-top', h);
       $('.starry-warpper').css('height', h);
       $('.hypers-loop-warpper').css('top', h / 2 - 75 - 128 / 2);
-    }else{
+    } else {
       $('.hypers-loop-warpper').hide();
     }
 

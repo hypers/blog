@@ -6,6 +6,7 @@
     <i class="fa fa-{{ theme.authoricon }}"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
+  <span class="post-count"> - 全站共{{ totalcount(site) }}字</span>
 </div>
 
 {% if theme.copyright %}

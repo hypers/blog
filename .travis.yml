@@ -8,6 +8,7 @@ cache:
     - node_modules
 before_deploy:
   - hexo g
+  - gulp
 deploy:
   - provider: pages
     skip_cleanup: true
