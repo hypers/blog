@@ -621,4 +621,4 @@ git merge <branch>
 - [Why does GitHub recommend HTTPS over SSH?](https://stackoverflow.com/questions/11041729/why-does-github-recommend-https-over-ssh)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/index.html)
 
-> 本文作者：[杨过](https://github.com/hiyangguo)
+> 本文作者：[Godfery](https://github.com/hiyangguo)
