@@ -311,10 +311,10 @@ disqus:
 # changyan
 gitment:
   enable: true
-  owner: hypers
+  owner: hiyangguo
   repo: blog
-  client_id: e1009506fe4450ede1f2
-  client_secret: c27364b31baedc07a7ab55dfb7454303b5c97742
+  client_id: 347deb18c926305d692a
+  client_secret: 0ad626ccfa0c9faa9fceee957bddb2a72df6c700
 
 # changyan
 #changyan:
