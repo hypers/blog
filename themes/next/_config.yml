@@ -309,10 +309,18 @@ disqus:
 #hypercomments_id:
 
 # changyan
-changyan:
-  enable: false
-  appid:
-  appkey:
+gitment:
+  enable: true
+  owner: hypers
+  repo: blog
+  client_id: e1009506fe4450ede1f2
+  client_secret: c27364b31baedc07a7ab55dfb7454303b5c97742
+
+# changyan
+#changyan:
+#  enable: false
+#  appid:
+#  appkey:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc

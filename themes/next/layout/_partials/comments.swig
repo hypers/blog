@@ -28,6 +28,8 @@
       <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
     {% elseif theme.changyan.appid and theme.changyan.appkey %}
       <div id="SOHUCS"></div>
+    {% elseif theme.gitment.client_id and theme.gitment.client_secret %}
+      <div id="gitment"></div>
     {% endif %}
   </div>
 {% endif %}
