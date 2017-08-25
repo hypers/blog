@@ -318,7 +318,7 @@ class Demo extends Component {
 这篇文章只是简单的介绍了高阶组件的两种最常见的使用方式：`属性代理`和`反向继承`。以及高阶组件的常见问题。希望通过本文的阅读使你对高阶组件有一个基本的认识。
 写本文所产生的代码在[study-hoc](https://github.com/hiyangguo/study-hoc)中。
 
-> 本文作者：[杨过](https://github.com/hiyangguo)
+> 本文作者：[Godfery](https://github.com/hiyangguo)
 
 参考文章:
 > [Higher-Order Components](https://facebook.github.io/react/docs/higher-order-components.html)
