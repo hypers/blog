@@ -1,6 +1,7 @@
 ---
 title: H5 是 HTML5 吗？
 date: 2017-08-22
+comments: true
 tag:
 - HTML5
 - H5
