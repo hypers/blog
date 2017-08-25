@@ -5,7 +5,7 @@
     <script src="/lib/gitment/gitment.browser.js"></script>
     <script>
       var gitment = new Gitment({
-        id: location.href ,
+        id: location.origin + location.pathname,
         owner: '{{theme.gitment.owner}}',
         repo: '{{theme.gitment.repo}}',
         oauth: {
