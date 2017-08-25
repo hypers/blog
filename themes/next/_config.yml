@@ -313,8 +313,8 @@ gitment:
   enable: true
   owner: hypers
   repo: blog
-  client_id: 8d4274296c4378118317
-  client_secret: 9242de17029802ca7af926d9f4995782d8b7a74a
+  client_id: 4d35960e25a9ddd509e1
+  client_secret: 67135bfe928907183511ad93d386bf149f34e772
 
 # changyan
 #changyan:
