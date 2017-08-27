@@ -192,7 +192,7 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
+  wordcount: true
   min2read: false
   separated_meta: true
 
@@ -308,11 +308,19 @@ disqus:
 # Hypercomments
 #hypercomments_id:
 
+# gitment
+gitment:
+  enable: true
+  owner: hiyangguo
+  repo: blog
+  client_id: 347deb18c926305d692a
+  client_secret: 0ad626ccfa0c9faa9fceee957bddb2a72df6c700
+
 # changyan
-changyan:
-  enable: false
-  appid:
-  appkey:
+#changyan:
+#  enable: false
+#  appid:
+#  appkey:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -496,7 +504,7 @@ use_motion: true
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
