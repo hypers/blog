@@ -328,7 +328,7 @@ class Demo extends Component {
 > [Higher-Order Components](https://facebook.github.io/react/docs/higher-order-components.html)
 > [深入浅出React高阶组件](https://mp.weixin.qq.com/s/AdP-3oA9ofv9hQfDc2r7KA)
 > [带着三个问题一起深入浅出React高阶组件](https://juejin.im/post/59818a485188255694568ff2)
-> [阮一峰 - 高阶函数](http://t.cn/RKWUqko)
+> [廖雪峰 - Python 2.7教程 高阶函数](http://t.cn/RKWUqko)
 > [深入理解高阶组件](http://www.jianshu.com/p/0aae7d4d9bc1)
 
 
