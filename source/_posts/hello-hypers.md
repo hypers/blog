@@ -1,6 +1,10 @@
 ---
 title: HyperS 前端团队博客创建了
 date: 2017-07-20
+copyright: true
+author:
+  name: Superman
+  link: https://github.com/superman66
 tag: 
 - HyperS
 ---
@@ -17,6 +21,10 @@ tag:
 ---
 title: you post title
 date: 2017-07-20 15:04:29
+copyright: true
+author:
+  name: HYPERS
+  link: http://www.hypers.com
 tags:
 - ES7
 - Async函数
@@ -29,10 +37,10 @@ tags:
 这里是正文部分的内容
 
 // 结尾
-> 本文作者：[Superman](https://github.com/superman66)
 > 原文地址：[原文地址]()
 >...
 ```
+
 文章应包括：
 * 标题
 * 时间
@@ -42,9 +50,13 @@ tags:
 
 **结尾的格式**
 
-* 本文作者 - 可以填写你的 GitHub 或者 个人站点信息
 * 原文地址 - 填写文章的出处（可选）
 * 其他按需添加
+
+**配置说明**
+
+{% asset_img article_config_instructions.png 配置说明 %}
+`copyright`可按需添加，如希望匿名投稿则可删除 `author` 的配置。
 
 ## 如何投稿
 **第一步：Fork 博客的 repository 到你的 GitHub 账号**
@@ -61,6 +73,7 @@ git clone git@github.com:hypers/blog.git
 使用`hexo new <title>`命令新建文章，例如：
 
 ```bash
+# 生成的文章默认作者为 HYPERS 且 `copyright` 为 true
 hexo new hello-hypers
 ```
 
@@ -70,5 +83,3 @@ hexo new hello-hypers
 **第四步**
 提交 `pull reqeust` 即可。
 
-
-> 本文作者：[Superman](https://github.com/superman66)

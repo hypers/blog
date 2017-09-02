@@ -1,10 +1,16 @@
 ---
 title: React 高阶组件浅析
 date: 2017-08-24 21:04:26
+copyright: true
+author: 
+  name: Godfery
+  link: https://github.com/hiyangguo
+categories:
+  - 前端
 tags:
-- React
-- 函数式编程
-- HOC
+  - React
+  - 函数式编程
+  - HOC
 ---
 
 # 背景
@@ -318,13 +324,11 @@ class Demo extends Component {
 这篇文章只是简单的介绍了高阶组件的两种最常见的使用方式：`属性代理`和`反向继承`。以及高阶组件的常见问题。希望通过本文的阅读使你对高阶组件有一个基本的认识。
 写本文所产生的代码在[study-hoc](https://github.com/hiyangguo/study-hoc)中。
 
-> 本文作者：[Godfery](https://github.com/hiyangguo)
-
 参考文章:
 > [Higher-Order Components](https://facebook.github.io/react/docs/higher-order-components.html)
 > [深入浅出React高阶组件](https://mp.weixin.qq.com/s/AdP-3oA9ofv9hQfDc2r7KA)
 > [带着三个问题一起深入浅出React高阶组件](https://juejin.im/post/59818a485188255694568ff2)
-> [阮一峰 - 高阶函数](http://t.cn/RKWUqko)
+> [廖雪峰 - Python 2.7教程 高阶函数](http://t.cn/RKWUqko)
 > [深入理解高阶组件](http://www.jianshu.com/p/0aae7d4d9bc1)
 
 

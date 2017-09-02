@@ -1,6 +1,10 @@
 ---
 title: Git使用入门教程
 date: 2017-08-06 21:20:22
+copyright: true
+author: 
+  name: Godfery
+  link: https://github.com/hiyangguo
 tags:
 - git 
 - 入门教程
@@ -620,5 +624,3 @@ git merge <branch>
 - [你需要知道的12个Git高级命令](http://www.infoq.com/cn/news/2016/01/12-git-advanced-commands)
 - [Why does GitHub recommend HTTPS over SSH?](https://stackoverflow.com/questions/11041729/why-does-github-recommend-https-over-ssh)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/index.html)
-
-> 本文作者：[Godfery](https://github.com/hiyangguo)
