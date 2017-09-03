@@ -22,14 +22,14 @@ tags:
 - 预览地址: https://rsuitejs.com/rsuite-table
 - Github: https://github.com/rsuite/rsuite-table
 
-最开始促使我们去实现这个 Table 组件是因为产品经理希望表格可以像 Excel一样固定表头，固定列头，我们都知道 HTML table 是不支持这个功能，但是在实际应用中，对于数据行多列多的情况下，固定表头和列头非常有用，方便数据关联浏览。我们的组件库都是 React 的， 开源环境中也没有找到一个适合的我们的 Table 组件。 Ant Design 中的 Table 估计有些人用过，UI 比较漂亮，但是在固定表头和列头的这个功能上我还是有些不满意，特别是要同时固定表头和列的时候，他们的 Table 在 Retina 屏幕上，通过触摸板滚动表格，固定的区域和非固定的区域会对不整齐，看上去会抖动，这个体验不是特别好。我知道 facebook 的 FixedDataTable 针对这块的处理做的还不错，是一个好的参考，特别是大数据量渲染也不卡顿，但是有些功能也不能满足我们的业务场景，比如在要 Table 中呈现一个树形结构就没有这个功能。所以还是决定自己造这个轮子。
+最开始促使我们去实现这个 Table 组件是因为产品经理希望表格可以像 Excel一样固定表头和列，我们都知道 HTML table 是不支持这个功能，但是在实际应用中，对于数据行多列多的情况下，固定表头和列非常有用，方便数据关联浏览。我们的组件库都是 React 的， 开源环境中也没有找到一个适合的我们的 Table 组件。 Ant Design 中的 Table 估计有些人用过，UI 比较漂亮，但是在固定表头和列的这个功能上我还是有些不满意，特别是要同时固定表头和列的时候，在 Retina 屏幕上，Ant Table 通过触摸板滚动表格，固定的区域和非固定的区域会对不整齐，看上去会抖动，这个体验不是特别好。我知道 facebook 的 FixedDataTable 针对这块的处理做的还不错，是一个好的参考，特别是大数据量渲染也不卡顿，但是有些功能也不能满足我们的业务场景，比如在要 Table 中呈现一个树形结构就没有这个功能。所以还是决定自己造这个轮子。
 
 
 ## 设计
 
 
 
-在 UI 的设计上符合 RSuite 的整体风格，当然样式是可以自定义的。 我们具体看一下组件的设计，整个 Table 提供了 5 个组件，分别是:
+在 UI 的设计上符合 RSuite 的整体风格。 我们具体看一下组件的设计，整个 Table 提供了 5 个组件，分别是:
 
 
 - `<Table>` 定义表格，可以设置数据源，表格类型等等
@@ -38,11 +38,15 @@ tags:
 - `<HeaderCell>`  定义列头的单元格。
 - `<TablePagination>` 定义分页，是一个可选组件。
 
+
+
 看一个简单的示例:
 
 ```
 npm i rsuite rsuite-table --save
 ```
+
+>  有些地方依赖了 RSuite 中的基础组件，所有需要安装 `rsuite`。
 
 ```js
 import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
@@ -89,8 +93,11 @@ import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
 - 用 transform: translate3D 代替 top 与 left ，因为 top/left 会导致回流，而 translate 只产生重绘，性能会更好，另外 translate3D 走的是 3D, 在手机浏览器器上会 GPU 加速。
 - `onScroll` 触发的频率和渲染的速度会存在跟不上的情况，所有这里最好是自己实现一个滚动条，在 Table Body 上监听 `onWheel` 事件，在滚动条上监听 `onMouse*` 事件。 在自己实现滚动条的时候需要注意的是，在 Mac 的 chrome 上，左右滑动的时候会触发浏览器的上一页和下一页功能，所以这里的事件冒泡要处理好（本来想找一个开源的滚动条轮子，发现有好多组件这个问题没有处理好，所以就自己写了）。
 
+> 对 DOM 操作用到了 [dom-lib](https://github.com/rsuite/dom-lib)
+
 我们的 Table 在处理上面两点以后，就解决了 Ant Design 的 Table 滚动存在的问题，当然如果大家有更好的方案，感谢你分享一下。
 另外，Ant Table 有很多方面做得是比我们好的，比如它支持固定右侧的列，支持嵌套表格等等功能。
+
 
 > [完整示例代码](https://github.com/rsuite/rsuite-table/tree/master/docs/examples/FixedColumnTable.js)
 
@@ -166,7 +173,7 @@ import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
 
 ### 分页
 
-提供了一个 `<TablePagination>` 组件，用于显示分页栏，这里的分页需要使用者自己去处理数据，或者后台去处理，看一下示例代码：
+提供了一个 `<TablePagination>` 组件，用于显示分页栏，这里的分页需要开发人员自己去处理数据，看一下示例代码：
 
 ```js
 function formatLengthMenu(lengthMenu) {
@@ -332,20 +339,4 @@ export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
 
 如果，你对这些问题有好的想法欢迎你 提交 [pull request](https://github.com/rsuite/rsuite-table)。
 如果，你在使用中存在任何问题，可以提交 [issues](https://github.com/rsuite/rsuite-table/issues)。
-
-
-[npm-badge]: https://img.shields.io/npm/v/rsuite-table.svg
-[npm]: https://www.npmjs.com/package/rsuite-table
-
-
-[npm-beta-badge]: https://img.shields.io/npm/v/rsuite-table/beta.svg
-[npm-beta]: https://www.npmjs.com/package/rsuite-table
-
-
-[build-badge]: https://travis-ci.org/rsuite/rsuite-table.svg
-[build]: https://travis-ci.org/rsuite/rsuite-table
-
-[coverage-badge]: https://coveralls.io/repos/github/rsuite/rsuite-table/badge.svg?branch=next
-[coverage]: https://coveralls.io/github/rsuite/rsuite-table
-
 
