@@ -312,10 +312,11 @@ disqus:
 gitment:
   enable: true
   owner: hypers
+  http: true
   admin:
      - 'hiyangguo'
      - 'simonguo'
-     - 'yelijing18'
+     - 'superman66'
   repo: blog
   client_id: 4d35960e25a9ddd509e1
   client_secret: 67135bfe928907183511ad93d386bf149f34e772
