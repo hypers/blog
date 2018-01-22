@@ -47,7 +47,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   #about: /about/
   archives: /archives/
   tags: /tags/
@@ -192,9 +192,9 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
+  wordcount: true
   min2read: false
-  separated_meta: true
+  separated_meta: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -204,7 +204,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -308,11 +308,24 @@ disqus:
 # Hypercomments
 #hypercomments_id:
 
+# gitment
+gitment:
+  enable: true
+  owner: hypers
+  http: true
+  admin:
+     - 'hiyangguo'
+     - 'simonguo'
+     - 'superman66'
+  repo: blog
+  client_id: 4d35960e25a9ddd509e1
+  client_secret: 67135bfe928907183511ad93d386bf149f34e772
+
 # changyan
-changyan:
-  enable: false
-  appid:
-  appkey:
+#changyan:
+#  enable: false
+#  appid:
+#  appkey:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -496,7 +509,7 @@ use_motion: true
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce

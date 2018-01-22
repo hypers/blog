@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hypers 前端团队博客
-subtitle: 
+title: HYPERS 前端团队博客
+subtitle:
 description:
 author: Hypers
 language: zh-Hans
@@ -71,3 +71,6 @@ deploy:
   type: git
   repository: https://github.com/hypers/blog.git
   branch: gh-pages
+
+# Hypers Analytics ID
+hypers_analytics_pid: 4080

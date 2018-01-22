@@ -44,4 +44,24 @@ $(document).ready(function () {
   CONFIG.motion && NexT.motion.integrator.bootstrap();
 
   $(document).trigger('bootstrap:after');
+
+
+  function updateMainTop() {
+    var h = $(window).height();
+    var w = $(window).width();
+    if (w > 768) {
+      $('.page-home .main').css('margin-top', h);
+      $('.starry-warpper').css('height', h);
+      $('.hypers-loop-warpper').css('top', h / 2 - 75 - 128 / 2);
+    } else {
+      $('.hypers-loop-warpper').hide();
+    }
+
+  }
+
+  if ($('.page-home').length) {
+    updateMainTop();
+    $(window).on('resize', updateMainTop);
+  }
+
 });

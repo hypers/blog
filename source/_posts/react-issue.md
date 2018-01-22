@@ -170,4 +170,4 @@ class SearchBox extends React.Component {
 - [Perform debounce in React.js](https://stackoverflow.com/questions/23123138/perform-debounce-in-react-js#answer-28046731)
 - [React Document SyntheticEvent](https://facebook.github.io/react/docs/events.html#event-pooling)
 
-> 本文作者：[郭小铭](https://github.com/simonguo)、[杨过](https://github.com/hiyangguo)
+> 本文作者：[郭小铭](https://github.com/simonguo)、[Godfery](https://github.com/hiyangguo)
