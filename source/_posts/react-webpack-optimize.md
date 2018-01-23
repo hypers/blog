@@ -6,7 +6,7 @@ tags:
 ## React 相关的优化
 * 使用 [babel-react-optimize](https://github.com/thejameskyle/babel-react-optimize) 对 React 代码进行优化
 * 检查没有使用的库，去除 import 引用
-* 按需打包所用的类库，比如 `lodash` 、`echart` 等
+* 按需打包所用的类库，比如 `lodash` 、`echarts` 等
 
 `lodash` 可以采用 [babel-plugin-lodash](https://github.com/lodash/babel-plugin-lodash) 进行优化。
 **需要注意的是**
@@ -245,4 +245,4 @@ new webpack.optimize.CommonsChunkPlugin({
 - [Webpack 持久化缓存实践](https://github.com/happylindz/blog/issues/7)
 - [深入理解 webpack 文件打包机制](https://github.com/happylindz/blog/issues/6)
 
-
+>本文作者：[超人](github.com/superman66)
