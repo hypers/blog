@@ -1,7 +1,11 @@
 ---
 title: React + Webpack 构建打包优化
 date: 2018-01-22 23:26:50
+category: 技术
 tags:
+- React
+- Webpack
+- 优化
 ---
 ## React 相关的优化
 * 使用 [babel-react-optimize](https://github.com/thejameskyle/babel-react-optimize) 对 React 代码进行优化
@@ -106,7 +110,7 @@ plugins.push( new BundleAnalyzerPlugin());
 除此之外，还可以将打包过程输出成json文件
 
 ```
-webpack --profile --json -> stats.json 
+webpack --profile --json -> stats.json
 ```
 
 然后到下面这两个网站进行分析
@@ -135,7 +139,7 @@ const plugins = [
       warnings: false,
       drop_console: false //eslint-disable-line
     }
-    })      
+    })
 ]
 ```
 
@@ -152,7 +156,7 @@ const plugins = [
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[chunkhash:8].js'
-  },  
+  },
 ```
 其中 `vendros.js` 是自己定义的哪些第三方库需要纳入 vendor 中，如下：
 
