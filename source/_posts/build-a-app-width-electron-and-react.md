@@ -1,5 +1,5 @@
 ---
-title: build-a-app-width-electron-and-react
+title: 如何使用 Electron 和 React 构建一个 APP
 copyright: true
 author:
   name: Godfery
