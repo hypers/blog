@@ -192,9 +192,9 @@ RenderBlock 其实就是我们 HTML 中的块级元素，我们都知道一个�
 那有什么办法可以把这些内部节点封装起来？就像我们写 javascript 模块化一样，W3C 工作组提出了 Shadow DOM 的概念，比如在 HTML5 支持的 <Video> 等标签，在其内部有很多复杂的结构， 但是播放，暂停等按钮我们在 DOM 树中无法直接找到相应的节点，这其实就是 Shadow DOM 的思想。  Shadow DOM 是可以通过 Javascript 自定义创建，在其内部可以维护自己的DOM, CSS ,事件等, 具有很好的密封性。 自定义 Shadow DOM 目前只有 Chrome 支持，不过，我相信在不远的将来 Shadow DOM 会给组件化开发带来更多美好的体验。
 
 
-**参考资料：**
+## 参考资料
 
-《WebKit 技术内幕》
-浏览器解密篇 http://www.nowamagic.net/academy/part/48/115/#
-WebKit Wiki  https://trac.webkit.org/wiki
+- 《WebKit 技术内幕》
+- 浏览器解密篇 http://www.nowamagic.net/academy/part/48/115/#
+- WebKit Wiki  https://trac.webkit.org/wiki
 
