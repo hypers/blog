@@ -86,3 +86,5 @@ $RECYCLE.BIN/
 /public
 yarn.lock
 /db.json
+/node_modules
+package-lock.json
