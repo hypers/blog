@@ -2,9 +2,11 @@
 title: HyperS 前端团队博客创建了
 date: 2017-07-20
 copyright: true
-author:
-  name: Superman
-  link: https://github.com/superman66
+authors:
+  - name: Superman
+    link: https://github.com/superman66
+  - name: Godfery
+    link: https://github.com/hiyangguo
 tag: 
 - HyperS
 ---
@@ -40,6 +42,17 @@ tags:
 > 原文地址：[原文地址]()
 >...
 ```
+
+如果有多个作者则需将 author 字段改为 authors ，例如：
+```
+authors:
+  - name: HYPERS
+    link: https://github.com/hypers
+  - name: Rsuite
+    link: https://github.com/rsuite
+```
+当 author 字段与 authors 字段同时存在时，则仅会使用 authors 的值。
+
 
 文章应包括：
 * 标题

@@ -311,7 +311,7 @@ disqus:
 
 # gitment
 gitment:
-  enable: true
+  enable: false
   owner: hypers
   http: true
   admin:

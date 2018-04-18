@@ -5,3 +5,16 @@
   background-color: $post-copyright.bg;
   list-style: none;
 }
+
+.post-copyright-authors {
+  a + a {
+    margin-left: 10px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "、";
+      left: -10px;
+    }
+  }
+}
