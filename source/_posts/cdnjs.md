@@ -4,7 +4,7 @@ copyright: true
 author:
   name: Godfery
   link: https://github.com/hiyangguo
-date: 2018-04-18 11:33:20
+date: 2018-05-29 10:16:20
 tags:
   - CDN
   - 免费 CDN
@@ -13,7 +13,7 @@ tags:
 ## 概述
 {% asset_img cdnjs-home-screenshoot.png cdnjs 官网截屏 %}
 
-本篇文章主要介绍了：如何提交自己的库到 [cdnjs][cdnjs-home]，提交要求，详细的提交步骤及遇到的问题与解决办法。
+本篇文章主要介绍了：如何提交自己的库到 [cdnjs][cdnjs]，提交要求，详细的提交步骤及遇到的问题与解决办法。
 
 <!-- more -->
 
