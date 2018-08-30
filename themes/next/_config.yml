@@ -242,7 +242,8 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  # Use
+  host: //fonts.loli.net
 
   # Global font settings used on <body> element.
   global:
@@ -310,11 +311,16 @@ disqus:
 
 # gitment
 gitment:
-  enable: true
-  owner: hiyangguo
+  enable: false
+  owner: hypers
+  http: true
+  admin:
+     - 'hiyangguo'
+     - 'simonguo'
+     - 'superman66'
   repo: blog
-  client_id: 347deb18c926305d692a
-  client_secret: 0ad626ccfa0c9faa9fceee957bddb2a72df6c700
+  client_id: 4d35960e25a9ddd509e1
+  client_secret: 67135bfe928907183511ad93d386bf149f34e772
 
 # changyan
 #changyan:

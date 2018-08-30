@@ -51,7 +51,7 @@ add(-5, 6, Math.abs); //11
 <!-- more -->
 
 # 一个简单的高阶组件
-下面我们来实现一个简单的高阶组件
+下面我们来实现一个简单的高阶组件`withHeader.js`
 ```javascript
 export default WrappedComponent => class HOC extends Component {
   render() {
@@ -66,6 +66,8 @@ export default WrappedComponent => class HOC extends Component {
 ```
 在其他组件中，我们引用这个高阶组件来强化它
 ```javascript
+import withHeader from './withHeader'
+
 export default class Demo extends Component {
   render() {
     return (
@@ -85,7 +87,7 @@ const WithHeaderDemo = withHeader(Demo);
 可以看到，`Demo` 被 `HOC` 包裹(wrapped)了之后添加了一个标题默认标题。但是同样会发现，如果调用了多个 `HOC` 之后，我们会看到很多的`HOC`，所以应
 该做一些优化，也就是在高阶组件包裹(wrapped)以后，应该保留原有的名称。
 
-我们改写一下上述的高阶组件代码，增加一个 `getDisplayName` 函数，之后为`Demo` 添加一个静态属性 `displayName`。
+我们改写一下上述的高阶组件`withHeader.js`的代码，增加一个 `getDisplayName` 函数，之后为`Demo` 添加一个静态属性 `displayName`。
 ```javascript
 const getDisplayName = component => component.displayName || component.name || 'Component';
 
@@ -160,6 +162,7 @@ const WithHeaderDemo = withHeader('高阶组件添加标题')(Demo);
 ## 基于属性代理（Props Proxy）的方式
 属性代理是最常见的高阶组件的使用方式，上面所说的高阶组件就是这种方式。
 它通过做一些操作，将被包裹组件的`props`和新生成的`props`一起传递给此组件，这称之为属性代理。
+下面我们新建一个`GenerateId.js` 文件
 ```javascript
 export default function GenerateId(WrappedComponent) {
   return class HOC extends Component {
@@ -178,8 +181,9 @@ export default function GenerateId(WrappedComponent) {
   };
 }
 ```
-调用`GenerateId`:
+然后调用它:
 ```javascript
+import GenerateId from './GenerateId';
 const PropsBorkerDemo = GenerateId(Demo);
 ```
 之后我们观察`React Dom Tree`：
@@ -318,7 +322,7 @@ class Demo extends Component {
   }}
 />
 ```
-虽然这并不是最完美的解决方案，但是`React`官方说他们正在探索解决这个问题的方法，能够让我们安心的使用高阶组件而不必关注这个问题。
+虽然这并不是最完美的解决方案，但是`React`官方在文档中说他们正在探索解决这个问题的方法，好让我们安心的使用高阶组件而不必关注这个问题。
 
 # 结语
 这篇文章只是简单的介绍了高阶组件的两种最常见的使用方式：`属性代理`和`反向继承`。以及高阶组件的常见问题。希望通过本文的阅读使你对高阶组件有一个基本的认识。
