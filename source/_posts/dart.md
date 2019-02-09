@@ -9,7 +9,6 @@ tags:
   - dart
 ---
 {% asset_img logo.png 这个世界到底还需不需要一门新的语言？ %}
-> - 关于Flutter入门可跳转至[flutter入门与填坑](http://blog.rsuitejs.com/2019/02/10/flutter/)
 > - 推荐图书：[Dart编程语言 - 【美】Gilad Bracha ](https://book.douban.com/subject/27074797/)
 > - 建议切一个窗口打开[DartPad](https://dartpad.dartlang.org/)边看边码，更能加深印象！
 
@@ -228,7 +227,7 @@ class Point{
    
    class Foo1 extends Bar {
      /*
-       * 1. Flutter中的继承是单继承
+       * 1. Dart中的继承是单继承
        * 2. 构造函数不能继承
        * 3. 子类重写超类的方法，要用@override
        * 4. 子类调用超类的方法，要用super
@@ -256,7 +255,7 @@ class Point{
        * 1. mixins类只能继承自object
        * 2. mixins类不能有构造函数
        * 3. 一个类可以mixins多个mixins类
-       * 4. 可以mixins多个类，不破坏Flutter的单继承
+       * 4. 可以mixins多个类，不破坏Dart的单继承
        * 注意：mixin有点像extends，但是我理解上更像是原型链的模型，with后即链上对象，采取的是覆盖原则，即靠后的生效。（甚至可以粗暴地理解为复制代码）
        * */
      //...other codes
