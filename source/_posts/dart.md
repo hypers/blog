@@ -78,7 +78,7 @@ void main()=>{};
 ```javascript
 for (var i = 0; i < 5; i++) {
   setTimeout(function () {
-    console.log(i);//他会很不和预期地打出五个4
+    console.log(i);//他会很不和预期地打出五个5
   }, 1000 * i);
 }
 ```
