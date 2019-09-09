@@ -27,13 +27,14 @@ tags:
 
 按照 《[Web Content Accessibility Guidelines (WCAG) ](https://www.w3.org/TR/WCAG/)》的要求，文字的颜色，字体的粗细，我们在对比度上都做了改进，调整了色板的算法，目的就是让您的产品更具有可访问性。
 
-![f54078a0de16521a97fa7ff5aa34ff63.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p343)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d1498985a9129f?w=880&h=602&f=png&s=77141)
 
 ##### 2.2 新增 Dark Mode（夜间模式）主题 
 
 在我们周围的电子产品中，从操作系统到浏览器、编辑器、以及各种阅读器都开始支持夜间模式。它是一种高对比度，或者反色模式的显示模式，如果您的用户需要长时间使用您的产品，拥有夜间模式能够有效的缓解眼疲劳，更易于阅读。
 
-![51b75ddbb23f86d0d96beb8edaa1a20b.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p342)
+
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d1499272638720?w=1420&h=853&f=png&s=155606)
 
 我们在您的夜里制作了一个美梦，在默认的主题基础上新增了 Dark Mode 主题，并提供了充分可以定制的选项，开发时候，只需要引入对应的样式文件：
 
@@ -52,7 +53,8 @@ import 'rsuite/lib/styles/themes/dark/index.less';
 
 [List](https://rsuitejs.com/en/components/list) 组件在移动端使用的非常多，但在中后台产品中，一直是一个不太好标准化的组件，在不同的业务场景下要求的表现形式都会存在差异，以至于我们在这个版本才实现它。List 除了可以自定义每一项的内容以外, 我们默认提供了拖拽排序功能。
 
-![f9d5feaed93ed7da8036b16506f8bbe1.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p344)
+
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d1499a9b979f94?w=487&h=229&f=png&s=18461)
 
 ##### 3.2 支持 Placeholder 组件
 
@@ -60,13 +62,13 @@ import 'rsuite/lib/styles/themes/dark/index.less';
 
 [Placeholder](https://rsuitejs.com/en/components/placeholder) 就是这么一个提供数据大致结构的组件。可以通过线条、矩形、圆形概要的绘制出内容区域的大致结构。
 
-![b47e22af5a21733e7dc9dd8930153793.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p353)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d1499f77c10e39?w=891&h=724&f=png&s=17659)
 
 ##### 3.3 支持 Calendar 组件
 
 [Calendar](https://rsuitejs.com/en/components/calendar) 是一个简单的日历面板，可以针对日程显示数据。提供了两种使用场景，一种就是默认的显示一个撑满容器的大日历面板，可以显示一个月内的数据。另外一种是提供了一个小的紧凑的小日历面板，在一些系统的侧边栏我们经常遇到，用于数据的筛选。
 
-![eef8ad58fb8c439d02b2fef194aa24dd.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p355)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149a3f3824c37?w=895&h=727&f=png&s=54767)
 
 
 ##### 3.4 支持 Avatar 与 Badge 组件
@@ -75,9 +77,10 @@ import 'rsuite/lib/styles/themes/dark/index.less';
 
 支持 [Badge](https://next.rsuitejs.com/components/badge) 组件，用于按钮、图标旁的数字或状态标记。
 
-![b775f7957bc59cfdc2d8db1d7853fbfb.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p362)
-![a3b40ad59de97d6f7e498f4f96101d38.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p358)
-![d71ba1541e56f518506b1b597b703af4.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p360)
+
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149a8842578e9?w=121&h=70&f=png&s=2223)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149aacf402c20?w=178&h=54&f=png&s=2084)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149ac8ae738a8?w=299&h=82&f=png&s=5800)
 
 
 #### 四、破坏性的变更
@@ -141,13 +144,13 @@ type PlacementAuto =
 
 我们在数据录入组件中有非常完善的 Picker 系列组件，除在可以在表单中使用以外，在一些数据过滤栏中也经常用到。考虑到 Input 和 Button 组件有 size 属性可以调整大小，所以对所有 Picker 也添加了 size 属性，满足更多场景的组合使用。
 
-![6a0cff56a95ad2eaab752cb9e4dd54b4.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p364)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149b57949846b?w=353&h=204&f=png&s=8676)
 
 ##### 5.2 Whisper、Picker 组件的防溢出处理
 
 所有的 Picker 组件与 Whisper 组件都是弹出一个指定位置的浮层，但有时候会因为浮层的大小超出容器的范围导致一部分浮层别挡住看不到，这个时候您可以设置一个 `preventOverfow` 属性，会根据容器的空闲空间调整浮层显示的相对位置，尽量让浮层完全展示在页面中。
 
-![](https://media.giphy.com/media/YkyxOedelzhx6Edo4B/giphy.gif)
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d1498045f9c842?w=480&h=240&f=gif&s=170083)
 
 ##### 5.3 FormControl 组件设置表单只读
 
@@ -158,7 +161,8 @@ type PlacementAuto =
 
 当这两个属性设置 Form 组件上，将对表单内所有的表单组件进行全局设置。在很多情况下我们需要给录入完成的表单添加一个数据详细页面，这个时候需要单独新增一个模块再把数据排版显示出来。为了提高代码的复用性，在这里您可以通过给 Form 组件设置一个 plaintext 属性，就把一个表单变成了数据详细面板。
 
-![92e4bc586fa6c1567fbb3900e7c13165.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p368)
+
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149bc31097512?w=701&h=688&f=png&s=102977)
 
 
 ##### 5.4 DatePicker 与 DateRangePicker 支持显示周数
@@ -169,8 +173,9 @@ type PlacementAuto =
 ```
 
 如果在您的业务中需要查看周数，可以通过设置 `showWeekNumbers` 属性，日历选择器的左侧就会显示当前行的周数。
-![3457979290927ebe4d8196587a1060ef.png](evernotecid://B94F2C27-2009-4193-810F-2A69B27CFC00/appyinxiangcom/4811070/ENResource/p367)
 
+
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149c0768b1b61?w=313&h=353&f=png&s=22659)
 
 ##### 5.5 Form 组合 Schema 支持异步校验
 
@@ -289,8 +294,8 @@ pickerRef.current.close();
 - 在 [OpenCollective](https://opencollective.com/rsuite#) 上赞助我们。
 
 这个项目的存在归功于所有贡献者。
-[![](https://opencollective.com/rsuite/contributors.svg?width=890)](https://github.com/rsuite/rsuite/graphs/contributors)
+[![](https://user-gold-cdn.xitu.io/2019/9/9/16d1497fc9f662ac?w=890&h=212&f=svg&s=999037)](https://github.com/rsuite/rsuite/graphs/contributors)
 
 国内交流群, 添加 React Suite 小助手，备注 rsuite， 邀请入群。
-![](https://user-images.githubusercontent.com/1203827/51657342-7ace0180-1fdf-11e9-9237-5d19c7a5c7da.jpeg)
 
+![](https://user-gold-cdn.xitu.io/2019/9/9/16d149d806331bdb?w=265&h=353&f=png&s=45642)
